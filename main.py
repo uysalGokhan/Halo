@@ -3,7 +3,7 @@ import time
 import os
 import shutil
 
-f = open('Halo/haloLog.csv', 'w', newline='')
+f = open('Halo/haloLog.csv', 'a', newline='')
 writer = csv.writer(f)
 
 
@@ -50,11 +50,14 @@ def create_type(instruction_line, type_name, tokens):
     with open(path + "/file1/page1.csv", 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_file.close()
-    with open(path + "/header.txt", 'w', newline='') as file_header:
+    with open(path + "/type_header.txt", 'w', newline='') as file_header:
         file_header.write("1")
     file_header.close()
     with open(path + "/file1/header.txt", 'w', newline='') as file_header:
         file_header.write("1 0 0")
+    file_header.close()
+    with open(path + "/file1/header2.txt", 'w', newline='') as file_header:
+        file_header.write("0 - 0 - 0 - 0 - 0 - 0 - 0 - 0")
     file_header.close()
     log = ["admin", time.time(), instruction_line.strip(), "success"]
     writer.writerow(log)
@@ -136,11 +139,14 @@ def inherit_type(instruction_line, target_type_name, source_type_name, columns):
     with open(path + "/file1/page1.csv", 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_file.close()
-    with open(path + "/header.txt", 'w', newline='') as file_header:
+    with open(path + "/type_header.txt", 'w', newline='') as file_header:
         file_header.write("1")
     file_header.close()
     with open(path + "/file1/header.txt", 'w', newline='') as file_header:
         file_header.write("1 0 0")
+    file_header.close()
+    with open(path + "/file1/header2.txt", 'w', newline='') as file_header:
+        file_header.write("0 - 0 - 0 - 0 - 0 - 0 - 0 - 0")
     file_header.close()
     log = ["admin", time.time(), instruction_line.strip(), "success"]
     writer.writerow(log)
@@ -181,7 +187,7 @@ def create_record(instruction_line, type_name, id, tokens):
         return
 
     path = "Halo/" + type_name
-    a_file = open(path + "/header.txt", "r")
+    a_file = open(path + "/type_header.txt", "r")
     lines = a_file.readlines()
     a_file.close()
     file_number = 0
