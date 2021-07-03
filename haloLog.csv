@@ -1,8 +1,0 @@
-admin,1625322995.691425,create type animal 4 name age height weight,success
-admin,1625322995.6944187,create type zeneme 3 a b c,success
-admin,1625322995.6974049,create type feneme 3 a s d,success
-admin,1625322995.700405,delete type abc,failure
-admin,1625322995.7024035,delete type feneme,success
-admin,1625322995.7064064,inherit type human animal alias occupation,success
-admin,1625322995.735404,inherit type zeneme feneme a c,failure
-admin,1625322995.7364035,list type,success
