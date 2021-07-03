@@ -1,0 +1,6 @@
+animal
+human
+zeneme
+animal
+human
+zeneme
