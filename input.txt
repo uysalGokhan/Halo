@@ -1,11 +1,10 @@
-login useralpha e226s187Xeno
-register user useralpha X3n0m3R X3n0m3R
-login useralpha X3n0m3R
 create type animal 4 name age height weight
+create type zeneme 3 a b c
+create type feneme 3 a s d
+create record zeneme 2 a c
+delete type abc
+delete type feneme
 inherit type human animal alias occupation
+inherit type zeneme feneme a c
 create record human 3 MarkWebbler 27 178 81 Shadow engineer
-list record human
-list record animal
-logout
-list record human
 list type

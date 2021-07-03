@@ -1,0 +1,3 @@
+animal name age height weight
+human name age height weight alias occupation
+zeneme a b c
